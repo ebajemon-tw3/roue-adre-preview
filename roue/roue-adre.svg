@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-48 -8 1096 1016" class="roue-adre" role="img" aria-labelledby="roue-titre roue-desc" data-referentiel="1.0">
+<title id="roue-titre">Roue ADRE : 4 éléments, 12 capacités, 6 axes</title>
+<desc id="roue-desc">Cadran circulaire. 12 pastilles de capacité posées sur un grand cercle, Sérénité à midi puis dans le sens horaire, chacune à sa couleur. 4 arcs d'élément bordent le cercle, la mention ETHER occupe les quatre coins. Les 6 axes relient deux capacités opposées et restent masqués tant qu'une capacité n'est pas survolée ou sélectionnée. La liste équivalente sous la roue donne le même accès à toutes les fiches.</desc>
+<style>.roue-adre { font-family: inherit; }.roue-demarcation { fill: none; stroke: var(--roue-brume, #A69B93); stroke-width: 1.5; stroke-dasharray: 1 7; stroke-linecap: round; opacity: 0.9; filter: drop-shadow(0 1px 2px rgba(94, 70, 34, 0.1)); }.roue-demarcation-marque { fill: var(--roue-fond, #FDF5E6); stroke: var(--roue-brume, #A69B93); stroke-width: 1.5; }.roue-fleche { fill: none; stroke-width: 2; stroke-dasharray: 1 8; stroke-linecap: round; opacity: 0.85; filter: drop-shadow(0 1px 2px rgba(94, 70, 34, 0.1)); }.roue-fleche-pointe { stroke: none; opacity: 0.85; filter: drop-shadow(0 1px 2px rgba(94, 70, 34, 0.1)); }.roue-cercle-argent { fill: none; stroke: var(--roue-argent, #C0C0C0); stroke-width: 2.5; }.roue-cercle { fill: none; stroke: url(#roue-degrade); stroke-width: 2.5; filter: drop-shadow(0 2px 5px rgba(94, 70, 34, 0.32)); }.roue-cercle-or { fill: none; stroke: var(--roue-or, #D4AF37); stroke-width: 1; opacity: 0.85; }.roue-ether { font-family: var(--font-titre, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif); font-style: italic; font-size: 25px; letter-spacing: 0.3em; fill: var(--roue-brume, #A69B93); }.roue-etoile { fill: none; stroke: var(--roue-or, #D4AF37); stroke-width: 1.3; stroke-linecap: round; }.roue-etoile-coeur { fill: var(--roue-or, #D4AF37); stroke: none; }.cap-secteur { fill-opacity: 0; stroke: none; transition: fill-opacity 160ms ease; }.cap-pastille { stroke: var(--roue-fond, #FDF5E6); stroke-width: 2; filter: drop-shadow(0 1.5px 4px rgba(94, 70, 34, 0.4)); }.cap-anneau { fill: none; stroke: var(--roue-argent, #C0C0C0); stroke-width: 1.5; opacity: 0; transition: opacity 160ms ease; }.cap-numero { font-family: var(--font-graduation, ui-monospace, 'SF Mono', Menlo, Consolas, monospace); font-size: 15px; fill: var(--roue-texte, #3A332E); opacity: 0.6; paint-order: stroke; stroke: var(--roue-fond, #FDF5E6); stroke-width: 5; stroke-linejoin: round; }.cap-label { font-family: var(--font-titre, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif); font-size: 22px; font-weight: 500; fill: var(--roue-texte, #3A332E); paint-order: stroke; stroke: var(--roue-fond, #FDF5E6); stroke-width: 5; stroke-linejoin: round; }.capacite:hover .cap-secteur, .capacite:focus-visible .cap-secteur, .capacite[data-actif='true'] .cap-secteur { fill-opacity: 0.26; }.capacite:hover .cap-anneau, .capacite:focus-visible .cap-anneau { opacity: 0.9; }.capacite:focus-visible { outline: none; }.capacite:focus-visible .cap-pastille { stroke: #1C1B19; stroke-width: 4; }.elem-arc { fill: none; stroke-width: 2.5; stroke-linecap: round; opacity: 0.85; filter: drop-shadow(0 2px 4px rgba(153, 122, 44, 0.4)); }.elem-label { font-family: var(--font-titre, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif); font-style: italic; font-size: 26px; letter-spacing: 0.18em; paint-order: stroke; stroke: var(--roue-fond, #FDF5E6); stroke-width: 5; stroke-linejoin: round; }#axes { opacity: 0; visibility: hidden; transition: opacity 200ms ease; }#axes.visible { opacity: 1; visibility: visible; }#axes.visible[data-axe-visible] .axe { opacity: 0.16; }#axes.visible[data-axe-visible] .axe[data-actif='true'] { opacity: 1; }.axe { fill: none; stroke: #1C1B19; stroke-width: 2; stroke-linecap: round; }.axe-pole { fill: var(--roue-fond, #FDF5E6); stroke: #1C1B19; stroke-width: 2; }#moyeu-libelles { pointer-events: none; }.moyeu-libelle { opacity: 0; transition: opacity 160ms ease; }.moyeu-libelle-position { font-family: var(--font-graduation, ui-monospace, 'SF Mono', Menlo, Consolas, monospace); font-size: 14px; letter-spacing: 0.25em; fill: #1C1B19; opacity: 0.7; paint-order: stroke; stroke: var(--roue-fond, #FDF5E6); stroke-width: 5; stroke-linejoin: round; }.moyeu-libelle-nom { font-family: var(--font-titre, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif); font-size: 30px; fill: #1C1B19; paint-order: stroke; stroke: var(--roue-fond, #FDF5E6); stroke-width: 6; stroke-linejoin: round; }#capacites:has(.capacite:hover) ~ #moyeu-libelles .moyeu-libelle, #capacites:has(.capacite:focus-visible) ~ #moyeu-libelles .moyeu-libelle, #capacites:has(:focus-visible > .capacite) ~ #moyeu-libelles .moyeu-libelle { opacity: 0; }@media (prefers-reduced-motion: reduce) { .cap-secteur, .cap-anneau, #axes, .moyeu-libelle { transition: none; } }.capacite[data-element="air"] .cap-secteur { fill: var(--adre-air, #B08A1E); }.element[data-element="air"] .elem-arc { stroke: var(--adre-air, #B08A1E); }.element[data-element="air"] .elem-label { fill: var(--roue-texte, #3A332E); }.roue-fleche[data-element="air"] { stroke: var(--adre-air, #B08A1E); }.roue-fleche-pointe[data-element="air"] { fill: var(--adre-air, #B08A1E); }.capacite[data-element="feu"] .cap-secteur { fill: var(--adre-feu, #B8412B); }.element[data-element="feu"] .elem-arc { stroke: var(--adre-feu, #B8412B); }.element[data-element="feu"] .elem-label { fill: var(--adre-feu, #B8412B); }.roue-fleche[data-element="feu"] { stroke: var(--adre-feu, #B8412B); }.roue-fleche-pointe[data-element="feu"] { fill: var(--adre-feu, #B8412B); }.capacite[data-element="terre"] .cap-secteur { fill: var(--adre-terre, #4B7539); }.element[data-element="terre"] .elem-arc { stroke: var(--adre-terre, #4B7539); }.element[data-element="terre"] .elem-label { fill: var(--adre-terre, #4B7539); }.roue-fleche[data-element="terre"] { stroke: var(--adre-terre, #4B7539); }.roue-fleche-pointe[data-element="terre"] { fill: var(--adre-terre, #4B7539); }.capacite[data-element="eau"] .cap-secteur { fill: var(--adre-eau, #26718F); }.element[data-element="eau"] .elem-arc { stroke: var(--adre-eau, #26718F); }.element[data-element="eau"] .elem-label { fill: var(--adre-eau, #26718F); }.roue-fleche[data-element="eau"] { stroke: var(--adre-eau, #26718F); }.roue-fleche-pointe[data-element="eau"] { fill: var(--adre-eau, #26718F); }#cap-serenite .cap-pastille { fill: var(--adre-cap-serenite, #E9DF10); }#capacites:has(#cap-serenite:hover) ~ #axes, #capacites:has(#cap-serenite:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-serenite) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-serenite:hover) ~ #axes .axe, #capacites:has(#cap-serenite:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-serenite) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-serenite:hover) ~ #axes #axe-racines-serenite, #capacites:has(#cap-serenite:focus-visible) ~ #axes #axe-racines-serenite, #capacites:has(:focus-visible > #cap-serenite) ~ #axes #axe-racines-serenite { opacity: 1; }#capacites:has(#cap-serenite:hover) #cap-racines .cap-secteur, #capacites:has(#cap-serenite:focus-visible) #cap-racines .cap-secteur, #capacites:has(:focus-visible > #cap-serenite) #cap-racines .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-serenite:hover) ~ #moyeu-libelles #moyeu-libelle-serenite, #capacites:has(#cap-serenite:focus-visible) ~ #moyeu-libelles #moyeu-libelle-serenite, #capacites:has(:focus-visible > #cap-serenite) ~ #moyeu-libelles #moyeu-libelle-serenite { opacity: 1; }#cap-clairvoyance .cap-pastille { fill: var(--adre-cap-clairvoyance, #F3B322); }#capacites:has(#cap-clairvoyance:hover) ~ #axes, #capacites:has(#cap-clairvoyance:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-clairvoyance) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-clairvoyance:hover) ~ #axes .axe, #capacites:has(#cap-clairvoyance:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-clairvoyance) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-clairvoyance:hover) ~ #axes #axe-autonomie-clairvoyance, #capacites:has(#cap-clairvoyance:focus-visible) ~ #axes #axe-autonomie-clairvoyance, #capacites:has(:focus-visible > #cap-clairvoyance) ~ #axes #axe-autonomie-clairvoyance { opacity: 1; }#capacites:has(#cap-clairvoyance:hover) #cap-autonomie .cap-secteur, #capacites:has(#cap-clairvoyance:focus-visible) #cap-autonomie .cap-secteur, #capacites:has(:focus-visible > #cap-clairvoyance) #cap-autonomie .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-clairvoyance:hover) ~ #moyeu-libelles #moyeu-libelle-clairvoyance, #capacites:has(#cap-clairvoyance:focus-visible) ~ #moyeu-libelles #moyeu-libelle-clairvoyance, #capacites:has(:focus-visible > #cap-clairvoyance) ~ #moyeu-libelles #moyeu-libelle-clairvoyance { opacity: 1; }#cap-protection .cap-pastille { fill: var(--adre-cap-protection, #ED5245); }#capacites:has(#cap-protection:hover) ~ #axes, #capacites:has(#cap-protection:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-protection) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-protection:hover) ~ #axes .axe, #capacites:has(#cap-protection:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-protection) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-protection:hover) ~ #axes #axe-protection-receptivite, #capacites:has(#cap-protection:focus-visible) ~ #axes #axe-protection-receptivite, #capacites:has(:focus-visible > #cap-protection) ~ #axes #axe-protection-receptivite { opacity: 1; }#capacites:has(#cap-protection:hover) #cap-receptivite .cap-secteur, #capacites:has(#cap-protection:focus-visible) #cap-receptivite .cap-secteur, #capacites:has(:focus-visible > #cap-protection) #cap-receptivite .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-protection:hover) ~ #moyeu-libelles #moyeu-libelle-protection, #capacites:has(#cap-protection:focus-visible) ~ #moyeu-libelles #moyeu-libelle-protection, #capacites:has(:focus-visible > #cap-protection) ~ #moyeu-libelles #moyeu-libelle-protection { opacity: 1; }#cap-affirmation .cap-pastille { fill: var(--adre-cap-affirmation, #FB1928); }#capacites:has(#cap-affirmation:hover) ~ #axes, #capacites:has(#cap-affirmation:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-affirmation) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-affirmation:hover) ~ #axes .axe, #capacites:has(#cap-affirmation:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-affirmation) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-affirmation:hover) ~ #axes #axe-affirmation-intimite, #capacites:has(#cap-affirmation:focus-visible) ~ #axes #axe-affirmation-intimite, #capacites:has(:focus-visible > #cap-affirmation) ~ #axes #axe-affirmation-intimite { opacity: 1; }#capacites:has(#cap-affirmation:hover) #cap-intimite .cap-secteur, #capacites:has(#cap-affirmation:focus-visible) #cap-intimite .cap-secteur, #capacites:has(:focus-visible > #cap-affirmation) #cap-intimite .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-affirmation:hover) ~ #moyeu-libelles #moyeu-libelle-affirmation, #capacites:has(#cap-affirmation:focus-visible) ~ #moyeu-libelles #moyeu-libelle-affirmation, #capacites:has(:focus-visible > #cap-affirmation) ~ #moyeu-libelles #moyeu-libelle-affirmation { opacity: 1; }#cap-creativite .cap-pastille { fill: var(--adre-cap-creativite, #E51B8A); }#capacites:has(#cap-creativite:hover) ~ #axes, #capacites:has(#cap-creativite:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-creativite) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-creativite:hover) ~ #axes .axe, #capacites:has(#cap-creativite:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-creativite) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-creativite:hover) ~ #axes #axe-creativite-lacher-prise, #capacites:has(#cap-creativite:focus-visible) ~ #axes #axe-creativite-lacher-prise, #capacites:has(:focus-visible > #cap-creativite) ~ #axes #axe-creativite-lacher-prise { opacity: 1; }#capacites:has(#cap-creativite:hover) #cap-lacher-prise .cap-secteur, #capacites:has(#cap-creativite:focus-visible) #cap-lacher-prise .cap-secteur, #capacites:has(:focus-visible > #cap-creativite) #cap-lacher-prise .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-creativite:hover) ~ #moyeu-libelles #moyeu-libelle-creativite, #capacites:has(#cap-creativite:focus-visible) ~ #moyeu-libelles #moyeu-libelle-creativite, #capacites:has(:focus-visible > #cap-creativite) ~ #moyeu-libelles #moyeu-libelle-creativite { opacity: 1; }#cap-realisation .cap-pastille { fill: var(--adre-cap-realisation, #7D3C98); }#capacites:has(#cap-realisation:hover) ~ #axes, #capacites:has(#cap-realisation:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-realisation) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-realisation:hover) ~ #axes .axe, #capacites:has(#cap-realisation:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-realisation) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-realisation:hover) ~ #axes #axe-magie-realisation, #capacites:has(#cap-realisation:focus-visible) ~ #axes #axe-magie-realisation, #capacites:has(:focus-visible > #cap-realisation) ~ #axes #axe-magie-realisation { opacity: 1; }#capacites:has(#cap-realisation:hover) #cap-magie .cap-secteur, #capacites:has(#cap-realisation:focus-visible) #cap-magie .cap-secteur, #capacites:has(:focus-visible > #cap-realisation) #cap-magie .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-realisation:hover) ~ #moyeu-libelles #moyeu-libelle-realisation, #capacites:has(#cap-realisation:focus-visible) ~ #moyeu-libelles #moyeu-libelle-realisation, #capacites:has(:focus-visible > #cap-realisation) ~ #moyeu-libelles #moyeu-libelle-realisation { opacity: 1; }#cap-racines .cap-pastille { fill: var(--adre-cap-racines, #4B3F72); }#capacites:has(#cap-racines:hover) ~ #axes, #capacites:has(#cap-racines:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-racines) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-racines:hover) ~ #axes .axe, #capacites:has(#cap-racines:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-racines) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-racines:hover) ~ #axes #axe-racines-serenite, #capacites:has(#cap-racines:focus-visible) ~ #axes #axe-racines-serenite, #capacites:has(:focus-visible > #cap-racines) ~ #axes #axe-racines-serenite { opacity: 1; }#capacites:has(#cap-racines:hover) #cap-serenite .cap-secteur, #capacites:has(#cap-racines:focus-visible) #cap-serenite .cap-secteur, #capacites:has(:focus-visible > #cap-racines) #cap-serenite .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-racines:hover) ~ #moyeu-libelles #moyeu-libelle-racines, #capacites:has(#cap-racines:focus-visible) ~ #moyeu-libelles #moyeu-libelle-racines, #capacites:has(:focus-visible > #cap-racines) ~ #moyeu-libelles #moyeu-libelle-racines { opacity: 1; }#cap-autonomie .cap-pastille { fill: var(--adre-cap-autonomie, #2E86C1); }#capacites:has(#cap-autonomie:hover) ~ #axes, #capacites:has(#cap-autonomie:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-autonomie) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-autonomie:hover) ~ #axes .axe, #capacites:has(#cap-autonomie:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-autonomie) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-autonomie:hover) ~ #axes #axe-autonomie-clairvoyance, #capacites:has(#cap-autonomie:focus-visible) ~ #axes #axe-autonomie-clairvoyance, #capacites:has(:focus-visible > #cap-autonomie) ~ #axes #axe-autonomie-clairvoyance { opacity: 1; }#capacites:has(#cap-autonomie:hover) #cap-clairvoyance .cap-secteur, #capacites:has(#cap-autonomie:focus-visible) #cap-clairvoyance .cap-secteur, #capacites:has(:focus-visible > #cap-autonomie) #cap-clairvoyance .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-autonomie:hover) ~ #moyeu-libelles #moyeu-libelle-autonomie, #capacites:has(#cap-autonomie:focus-visible) ~ #moyeu-libelles #moyeu-libelle-autonomie, #capacites:has(:focus-visible > #cap-autonomie) ~ #moyeu-libelles #moyeu-libelle-autonomie { opacity: 1; }#cap-receptivite .cap-pastille { fill: var(--adre-cap-receptivite, #1ABC9C); }#capacites:has(#cap-receptivite:hover) ~ #axes, #capacites:has(#cap-receptivite:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-receptivite) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-receptivite:hover) ~ #axes .axe, #capacites:has(#cap-receptivite:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-receptivite) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-receptivite:hover) ~ #axes #axe-protection-receptivite, #capacites:has(#cap-receptivite:focus-visible) ~ #axes #axe-protection-receptivite, #capacites:has(:focus-visible > #cap-receptivite) ~ #axes #axe-protection-receptivite { opacity: 1; }#capacites:has(#cap-receptivite:hover) #cap-protection .cap-secteur, #capacites:has(#cap-receptivite:focus-visible) #cap-protection .cap-secteur, #capacites:has(:focus-visible > #cap-receptivite) #cap-protection .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-receptivite:hover) ~ #moyeu-libelles #moyeu-libelle-receptivite, #capacites:has(#cap-receptivite:focus-visible) ~ #moyeu-libelles #moyeu-libelle-receptivite, #capacites:has(:focus-visible > #cap-receptivite) ~ #moyeu-libelles #moyeu-libelle-receptivite { opacity: 1; }#cap-intimite .cap-pastille { fill: var(--adre-cap-intimite, #2ECC71); }#capacites:has(#cap-intimite:hover) ~ #axes, #capacites:has(#cap-intimite:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-intimite) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-intimite:hover) ~ #axes .axe, #capacites:has(#cap-intimite:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-intimite) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-intimite:hover) ~ #axes #axe-affirmation-intimite, #capacites:has(#cap-intimite:focus-visible) ~ #axes #axe-affirmation-intimite, #capacites:has(:focus-visible > #cap-intimite) ~ #axes #axe-affirmation-intimite { opacity: 1; }#capacites:has(#cap-intimite:hover) #cap-affirmation .cap-secteur, #capacites:has(#cap-intimite:focus-visible) #cap-affirmation .cap-secteur, #capacites:has(:focus-visible > #cap-intimite) #cap-affirmation .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-intimite:hover) ~ #moyeu-libelles #moyeu-libelle-intimite, #capacites:has(#cap-intimite:focus-visible) ~ #moyeu-libelles #moyeu-libelle-intimite, #capacites:has(:focus-visible > #cap-intimite) ~ #moyeu-libelles #moyeu-libelle-intimite { opacity: 1; }#cap-lacher-prise .cap-pastille { fill: var(--adre-cap-lacher-prise, #6BF178); }#capacites:has(#cap-lacher-prise:hover) ~ #axes, #capacites:has(#cap-lacher-prise:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-lacher-prise) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-lacher-prise:hover) ~ #axes .axe, #capacites:has(#cap-lacher-prise:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-lacher-prise) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-lacher-prise:hover) ~ #axes #axe-creativite-lacher-prise, #capacites:has(#cap-lacher-prise:focus-visible) ~ #axes #axe-creativite-lacher-prise, #capacites:has(:focus-visible > #cap-lacher-prise) ~ #axes #axe-creativite-lacher-prise { opacity: 1; }#capacites:has(#cap-lacher-prise:hover) #cap-creativite .cap-secteur, #capacites:has(#cap-lacher-prise:focus-visible) #cap-creativite .cap-secteur, #capacites:has(:focus-visible > #cap-lacher-prise) #cap-creativite .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-lacher-prise:hover) ~ #moyeu-libelles #moyeu-libelle-lacher-prise, #capacites:has(#cap-lacher-prise:focus-visible) ~ #moyeu-libelles #moyeu-libelle-lacher-prise, #capacites:has(:focus-visible > #cap-lacher-prise) ~ #moyeu-libelles #moyeu-libelle-lacher-prise { opacity: 1; }#cap-magie .cap-pastille { fill: var(--adre-cap-magie, #C5E86C); }#capacites:has(#cap-magie:hover) ~ #axes, #capacites:has(#cap-magie:focus-visible) ~ #axes, #capacites:has(:focus-visible > #cap-magie) ~ #axes { opacity: 1; visibility: visible; }#capacites:has(#cap-magie:hover) ~ #axes .axe, #capacites:has(#cap-magie:focus-visible) ~ #axes .axe, #capacites:has(:focus-visible > #cap-magie) ~ #axes .axe { opacity: 0; }#capacites:has(#cap-magie:hover) ~ #axes #axe-magie-realisation, #capacites:has(#cap-magie:focus-visible) ~ #axes #axe-magie-realisation, #capacites:has(:focus-visible > #cap-magie) ~ #axes #axe-magie-realisation { opacity: 1; }#capacites:has(#cap-magie:hover) #cap-realisation .cap-secteur, #capacites:has(#cap-magie:focus-visible) #cap-realisation .cap-secteur, #capacites:has(:focus-visible > #cap-magie) #cap-realisation .cap-secteur { fill-opacity: 0.14; }#capacites:has(#cap-magie:hover) ~ #moyeu-libelles #moyeu-libelle-magie, #capacites:has(#cap-magie:focus-visible) ~ #moyeu-libelles #moyeu-libelle-magie, #capacites:has(:focus-visible > #cap-magie) ~ #moyeu-libelles #moyeu-libelle-magie { opacity: 1; }</style>
+<defs>
+<linearGradient id="roue-degrade" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#1E90FF" stop-opacity="0.55"/>
+<stop offset="1" stop-color="#E63946" stop-opacity="0.55"/>
+</linearGradient>
+</defs>
+<g id="moyeu">
+<g class="roue-decor" aria-hidden="true">
+<line class="roue-demarcation" x1="-36" y1="500" x2="1036" y2="500"/>
+<circle class="roue-demarcation-marque" id="demarcation-ouest" data-zone="demarcation" cx="126" cy="500" r="10.22"/>
+<circle class="roue-demarcation-marque" id="demarcation-est" data-zone="demarcation" cx="874" cy="500" r="10.22"/>
+<path class="roue-fleche" data-element="air" data-zone="fleche-air" d="M 400.61 320.7 A 205 205 0 0 1 599.39 320.7"/>
+<polygon class="roue-fleche-pointe" data-element="air" points="392.74 325.07 399.06 317.9 402.17 323.5"/>
+<polygon class="roue-fleche-pointe" data-element="air" points="607.26 325.07 600.94 317.9 597.83 323.5"/>
+<path class="roue-fleche" data-element="feu" data-zone="fleche-feu" d="M 679.3 400.61 A 205 205 0 0 1 679.3 599.39"/>
+<polygon class="roue-fleche-pointe" data-element="feu" points="674.93 392.74 682.1 399.06 676.5 402.17"/>
+<polygon class="roue-fleche-pointe" data-element="feu" points="674.93 607.26 682.1 600.94 676.5 597.83"/>
+<path class="roue-fleche" data-element="terre" data-zone="fleche-terre" d="M 599.39 679.3 A 205 205 0 0 1 400.61 679.3"/>
+<polygon class="roue-fleche-pointe" data-element="terre" points="607.26 674.93 600.94 682.1 597.83 676.5"/>
+<polygon class="roue-fleche-pointe" data-element="terre" points="392.74 674.93 399.06 682.1 402.17 676.5"/>
+<path class="roue-fleche" data-element="eau" data-zone="fleche-eau" d="M 320.7 599.39 A 205 205 0 0 1 320.7 400.61"/>
+<polygon class="roue-fleche-pointe" data-element="eau" points="325.07 607.26 317.9 600.94 323.5 597.83"/>
+<polygon class="roue-fleche-pointe" data-element="eau" points="325.07 392.74 317.9 399.06 323.5 402.17"/>
+<circle class="roue-cercle-argent" cx="500" cy="500" r="334.5"/>
+<circle class="roue-cercle" data-zone="anneau" cx="500" cy="500" r="340"/>
+<circle class="roue-cercle-or" cx="500" cy="500" r="346"/>
+<text class="roue-ether" data-zone="ether" x="-36" y="44" text-anchor="start">ETHER</text>
+<text class="roue-ether" data-zone="ether" x="1036" y="44" text-anchor="end">ETHER</text>
+<text class="roue-ether" data-zone="ether" x="-36" y="972" text-anchor="start">ETHER</text>
+<text class="roue-ether" data-zone="ether" x="1036" y="972" text-anchor="end">ETHER</text>
+<g id="etoile-centrale">
+<line class="roue-etoile" x1="500" y1="492" x2="500" y2="454"/>
+<line class="roue-etoile" x1="503.06" y1="492.61" x2="505.36" y2="487.07"/>
+<line class="roue-etoile" x1="505.66" y1="494.34" x2="518.38" y2="481.62"/>
+<line class="roue-etoile" x1="507.39" y1="496.94" x2="512.93" y2="494.64"/>
+<line class="roue-etoile" x1="508" y1="500" x2="546" y2="500"/>
+<line class="roue-etoile" x1="507.39" y1="503.06" x2="512.93" y2="505.36"/>
+<line class="roue-etoile" x1="505.66" y1="505.66" x2="518.38" y2="518.38"/>
+<line class="roue-etoile" x1="503.06" y1="507.39" x2="505.36" y2="512.93"/>
+<line class="roue-etoile" x1="500" y1="508" x2="500" y2="546"/>
+<line class="roue-etoile" x1="496.94" y1="507.39" x2="494.64" y2="512.93"/>
+<line class="roue-etoile" x1="494.34" y1="505.66" x2="481.62" y2="518.38"/>
+<line class="roue-etoile" x1="492.61" y1="503.06" x2="487.07" y2="505.36"/>
+<line class="roue-etoile" x1="492" y1="500" x2="454" y2="500"/>
+<line class="roue-etoile" x1="492.61" y1="496.94" x2="487.07" y2="494.64"/>
+<line class="roue-etoile" x1="494.34" y1="494.34" x2="481.62" y2="481.62"/>
+<line class="roue-etoile" x1="496.94" y1="492.61" x2="494.64" y2="487.07"/>
+<circle class="roue-etoile" cx="500" cy="500" r="7.5"/>
+<circle class="roue-etoile-coeur" cx="500" cy="500" r="3"/>
+</g>
+</g>
+</g>
+<g id="capacites">
+<g class="capacite" id="cap-serenite" data-capacite="serenite" data-element="air" data-axe="racines-serenite" data-oppose="racines" data-angle="-90" data-position="1" tabindex="0" role="link" aria-label="Capacité Sérénité, élément AIR">
+<path class="cap-secteur" d="M 410.97 167.72 A 344 344 0 0 1 589.03 167.72 L 543.48 337.72 A 168 168 0 0 0 456.52 337.72 Z"/>
+<circle class="cap-anneau" cx="500" cy="160" r="21"/>
+<circle class="cap-pastille" cx="500" cy="160" r="15"/>
+<text class="cap-numero" x="500" y="206" text-anchor="middle" dominant-baseline="central">1</text>
+<text class="cap-label" x="500" y="98" text-anchor="middle" dominant-baseline="central">Sérénité</text>
+</g>
+<g class="capacite" id="cap-clairvoyance" data-capacite="clairvoyance" data-element="air" data-axe="autonomie-clairvoyance" data-oppose="autonomie" data-angle="-60" data-position="2" tabindex="0" role="link" aria-label="Capacité Clairvoyance, élément AIR">
+<path class="cap-secteur" d="M 589.03 167.72 A 344 344 0 0 1 743.24 256.76 L 618.79 381.21 A 168 168 0 0 0 543.48 337.72 Z"/>
+<circle class="cap-anneau" cx="670" cy="205.55" r="21"/>
+<circle class="cap-pastille" cx="670" cy="205.55" r="15"/>
+<text class="cap-numero" x="647" y="245.39" text-anchor="middle" dominant-baseline="central">2</text>
+<text class="cap-label" x="701" y="151.86" text-anchor="start" dominant-baseline="central">Clairvoyance</text>
+</g>
+<g class="capacite" id="cap-protection" data-capacite="protection" data-element="feu" data-axe="protection-receptivite" data-oppose="receptivite" data-angle="-30" data-position="3" tabindex="0" role="link" aria-label="Capacité Protection, élément FEU">
+<path class="cap-secteur" d="M 743.24 256.76 A 344 344 0 0 1 832.28 410.97 L 662.28 456.52 A 168 168 0 0 0 618.79 381.21 Z"/>
+<circle class="cap-anneau" cx="794.45" cy="330" r="21"/>
+<circle class="cap-pastille" cx="794.45" cy="330" r="15"/>
+<text class="cap-numero" x="754.61" y="353" text-anchor="middle" dominant-baseline="central">3</text>
+<text class="cap-label" x="848.14" y="299" text-anchor="start" dominant-baseline="central">Protection</text>
+</g>
+<g class="capacite" id="cap-affirmation" data-capacite="affirmation" data-element="feu" data-axe="affirmation-intimite" data-oppose="intimite" data-angle="0" data-position="4" tabindex="0" role="link" aria-label="Capacité Affirmation, élément FEU">
+<path class="cap-secteur" d="M 832.28 410.97 A 344 344 0 0 1 832.28 589.03 L 662.28 543.48 A 168 168 0 0 0 662.28 456.52 Z"/>
+<circle class="cap-anneau" cx="840" cy="500" r="21"/>
+<circle class="cap-pastille" cx="840" cy="500" r="15"/>
+<text class="cap-numero" x="794" y="500" text-anchor="middle" dominant-baseline="central">4</text>
+<text class="cap-label" x="902" y="500" text-anchor="start" dominant-baseline="central">Affirmation</text>
+</g>
+<g class="capacite" id="cap-creativite" data-capacite="creativite" data-element="feu" data-axe="creativite-lacher-prise" data-oppose="lacher-prise" data-angle="30" data-position="5" tabindex="0" role="link" aria-label="Capacité Créativité, élément FEU">
+<path class="cap-secteur" d="M 832.28 589.03 A 344 344 0 0 1 743.24 743.24 L 618.79 618.79 A 168 168 0 0 0 662.28 543.48 Z"/>
+<circle class="cap-anneau" cx="794.45" cy="670" r="21"/>
+<circle class="cap-pastille" cx="794.45" cy="670" r="15"/>
+<text class="cap-numero" x="754.61" y="647" text-anchor="middle" dominant-baseline="central">5</text>
+<text class="cap-label" x="848.14" y="701" text-anchor="start" dominant-baseline="central">Créativité</text>
+</g>
+<g class="capacite" id="cap-realisation" data-capacite="realisation" data-element="terre" data-axe="magie-realisation" data-oppose="magie" data-angle="60" data-position="6" tabindex="0" role="link" aria-label="Capacité Réalisation, élément TERRE">
+<path class="cap-secteur" d="M 743.24 743.24 A 344 344 0 0 1 589.03 832.28 L 543.48 662.28 A 168 168 0 0 0 618.79 618.79 Z"/>
+<circle class="cap-anneau" cx="670" cy="794.45" r="21"/>
+<circle class="cap-pastille" cx="670" cy="794.45" r="15"/>
+<text class="cap-numero" x="647" y="754.61" text-anchor="middle" dominant-baseline="central">6</text>
+<text class="cap-label" x="701" y="848.14" text-anchor="start" dominant-baseline="central">Réalisation</text>
+</g>
+<g class="capacite" id="cap-racines" data-capacite="racines" data-element="terre" data-axe="racines-serenite" data-oppose="serenite" data-angle="90" data-position="7" tabindex="0" role="link" aria-label="Capacité Racines, élément TERRE">
+<path class="cap-secteur" d="M 589.03 832.28 A 344 344 0 0 1 410.97 832.28 L 456.52 662.28 A 168 168 0 0 0 543.48 662.28 Z"/>
+<circle class="cap-anneau" cx="500" cy="840" r="21"/>
+<circle class="cap-pastille" cx="500" cy="840" r="15"/>
+<text class="cap-numero" x="500" y="794" text-anchor="middle" dominant-baseline="central">7</text>
+<text class="cap-label" x="500" y="902" text-anchor="middle" dominant-baseline="central">Racines</text>
+</g>
+<g class="capacite" id="cap-autonomie" data-capacite="autonomie" data-element="terre" data-axe="autonomie-clairvoyance" data-oppose="clairvoyance" data-angle="120" data-position="8" tabindex="0" role="link" aria-label="Capacité Autonomie, élément TERRE">
+<path class="cap-secteur" d="M 410.97 832.28 A 344 344 0 0 1 256.76 743.24 L 381.21 618.79 A 168 168 0 0 0 456.52 662.28 Z"/>
+<circle class="cap-anneau" cx="330" cy="794.45" r="21"/>
+<circle class="cap-pastille" cx="330" cy="794.45" r="15"/>
+<text class="cap-numero" x="353" y="754.61" text-anchor="middle" dominant-baseline="central">8</text>
+<text class="cap-label" x="299" y="848.14" text-anchor="end" dominant-baseline="central">Autonomie</text>
+</g>
+<g class="capacite" id="cap-receptivite" data-capacite="receptivite" data-element="eau" data-axe="protection-receptivite" data-oppose="protection" data-angle="150" data-position="9" tabindex="0" role="link" aria-label="Capacité Réceptivité, élément EAU">
+<path class="cap-secteur" d="M 256.76 743.24 A 344 344 0 0 1 167.72 589.03 L 337.72 543.48 A 168 168 0 0 0 381.21 618.79 Z"/>
+<circle class="cap-anneau" cx="205.55" cy="670" r="21"/>
+<circle class="cap-pastille" cx="205.55" cy="670" r="15"/>
+<text class="cap-numero" x="245.39" y="647" text-anchor="middle" dominant-baseline="central">9</text>
+<text class="cap-label" x="151.86" y="701" text-anchor="end" dominant-baseline="central">Réceptivité</text>
+</g>
+<g class="capacite" id="cap-intimite" data-capacite="intimite" data-element="eau" data-axe="affirmation-intimite" data-oppose="affirmation" data-angle="180" data-position="10" tabindex="0" role="link" aria-label="Capacité Intimité, élément EAU">
+<path class="cap-secteur" d="M 167.72 589.03 A 344 344 0 0 1 167.72 410.97 L 337.72 456.52 A 168 168 0 0 0 337.72 543.48 Z"/>
+<circle class="cap-anneau" cx="160" cy="500" r="21"/>
+<circle class="cap-pastille" cx="160" cy="500" r="15"/>
+<text class="cap-numero" x="206" y="500" text-anchor="middle" dominant-baseline="central">10</text>
+<text class="cap-label" x="98" y="500" text-anchor="end" dominant-baseline="central">Intimité</text>
+</g>
+<g class="capacite" id="cap-lacher-prise" data-capacite="lacher-prise" data-element="eau" data-axe="creativite-lacher-prise" data-oppose="creativite" data-angle="210" data-position="11" tabindex="0" role="link" aria-label="Capacité Lâcher-prise, élément EAU">
+<path class="cap-secteur" d="M 167.72 410.97 A 344 344 0 0 1 256.76 256.76 L 381.21 381.21 A 168 168 0 0 0 337.72 456.52 Z"/>
+<circle class="cap-anneau" cx="205.55" cy="330" r="21"/>
+<circle class="cap-pastille" cx="205.55" cy="330" r="15"/>
+<text class="cap-numero" x="245.39" y="353" text-anchor="middle" dominant-baseline="central">11</text>
+<text class="cap-label" x="151.86" y="299" text-anchor="end" dominant-baseline="central">Lâcher-prise</text>
+</g>
+<g class="capacite" id="cap-magie" data-capacite="magie" data-element="air" data-axe="magie-realisation" data-oppose="realisation" data-angle="240" data-position="12" tabindex="0" role="link" aria-label="Capacité Magie, élément AIR">
+<path class="cap-secteur" d="M 256.76 256.76 A 344 344 0 0 1 410.97 167.72 L 456.52 337.72 A 168 168 0 0 0 381.21 381.21 Z"/>
+<circle class="cap-anneau" cx="330" cy="205.55" r="21"/>
+<circle class="cap-pastille" cx="330" cy="205.55" r="15"/>
+<text class="cap-numero" x="353" y="245.39" text-anchor="middle" dominant-baseline="central">12</text>
+<text class="cap-label" x="299" y="151.86" text-anchor="end" dominant-baseline="central">Magie</text>
+</g>
+</g>
+<g id="elements">
+<g class="element" id="elem-air" data-element="air" data-arc="225 315">
+<path class="elem-arc" d="M 294 263.02 A 314 314 0 0 1 706 263.02"/>
+<text class="elem-label" x="500" y="315" text-anchor="middle" dominant-baseline="central">AIR</text>
+</g>
+<g class="element" id="elem-feu" data-element="feu" data-arc="315 405">
+<path class="elem-arc" d="M 736.98 294 A 314 314 0 0 1 736.98 706"/>
+<text class="elem-label" x="685" y="500" text-anchor="middle" dominant-baseline="central">FEU</text>
+</g>
+<g class="element" id="elem-terre" data-element="terre" data-arc="45 135">
+<path class="elem-arc" d="M 706 736.98 A 314 314 0 0 1 294 736.98"/>
+<text class="elem-label" x="500" y="685" text-anchor="middle" dominant-baseline="central">TERRE</text>
+</g>
+<g class="element" id="elem-eau" data-element="eau" data-arc="135 225">
+<path class="elem-arc" d="M 263.02 706 A 314 314 0 0 1 263.02 294"/>
+<text class="elem-label" x="315" y="500" text-anchor="middle" dominant-baseline="central">EAU</text>
+</g>
+</g>
+<g id="axes">
+<g class="axe" id="axe-racines-serenite" data-axe="racines-serenite" data-pole-a="serenite" data-pole-b="racines">
+<path d="M 500 183 Q 370 500 500 817"/>
+<circle class="axe-pole" cx="500" cy="183" r="7"/>
+<circle class="axe-pole" cx="500" cy="817" r="7"/>
+</g>
+<g class="axe" id="axe-autonomie-clairvoyance" data-axe="autonomie-clairvoyance" data-pole-a="clairvoyance" data-pole-b="autonomie">
+<path d="M 658.5 225.47 Q 432.45 461 341.5 774.53"/>
+<circle class="axe-pole" cx="658.5" cy="225.47" r="7"/>
+<circle class="axe-pole" cx="341.5" cy="774.53" r="7"/>
+</g>
+<g class="axe" id="axe-protection-receptivite" data-axe="protection-receptivite" data-pole-a="protection" data-pole-b="receptivite">
+<path d="M 774.53 341.5 Q 487 477.48 225.47 658.5"/>
+<circle class="axe-pole" cx="774.53" cy="341.5" r="7"/>
+<circle class="axe-pole" cx="225.47" cy="658.5" r="7"/>
+</g>
+<g class="axe" id="axe-affirmation-intimite" data-axe="affirmation-intimite" data-pole-a="affirmation" data-pole-b="intimite">
+<path d="M 817 500 Q 500 526 183 500"/>
+<circle class="axe-pole" cx="817" cy="500" r="7"/>
+<circle class="axe-pole" cx="183" cy="500" r="7"/>
+</g>
+<g class="axe" id="axe-creativite-lacher-prise" data-axe="creativite-lacher-prise" data-pole-a="creativite" data-pole-b="lacher-prise">
+<path d="M 774.53 658.5 Q 461 567.55 225.47 341.5"/>
+<circle class="axe-pole" cx="774.53" cy="658.5" r="7"/>
+<circle class="axe-pole" cx="225.47" cy="341.5" r="7"/>
+</g>
+<g class="axe" id="axe-magie-realisation" data-axe="magie-realisation" data-pole-a="realisation" data-pole-b="magie">
+<path d="M 658.5 774.53 Q 387.42 565 341.5 225.47"/>
+<circle class="axe-pole" cx="658.5" cy="774.53" r="7"/>
+<circle class="axe-pole" cx="341.5" cy="225.47" r="7"/>
+</g>
+</g>
+<g id="moyeu-libelles">
+<g class="moyeu-libelle" id="moyeu-libelle-serenite">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 1</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Sérénité</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-clairvoyance">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 2</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Clairvoyance</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-protection">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 3</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Protection</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-affirmation">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 4</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Affirmation</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-creativite">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 5</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Créativité</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-realisation">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 6</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Réalisation</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-racines">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 7</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Racines</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-autonomie">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 8</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Autonomie</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-receptivite">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 9</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Réceptivité</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-intimite">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 10</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Intimité</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-lacher-prise">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 11</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Lâcher-prise</text>
+</g>
+<g class="moyeu-libelle" id="moyeu-libelle-magie">
+<text class="moyeu-libelle-position" x="500" y="478" text-anchor="middle">POSITION 12</text>
+<text class="moyeu-libelle-nom" x="500" y="516" text-anchor="middle">Magie</text>
+</g>
+</g>
+</svg>
